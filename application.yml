@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active:
+      - dev
+---
+spring:
+  profiles: dev    # 开发环境
+  application:
+    name: application:microservicecloud-config-pupupu-dev
+---
+spring:
+  profiles: test   # 测试环境
+  application:
+    name: application:microservicecloud-config-pupupu-test
+# 一定将格式保存为UTF-8格式 不然提交到github上会报配置文件错误
