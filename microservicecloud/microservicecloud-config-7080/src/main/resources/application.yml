@@ -1,0 +1,12 @@
+server:
+  port: 7080
+
+spring:
+  application:
+    name: microservicecloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/pupupu-ai/microservicecloud-config.git  # github上仓库的SSH地址
+          # 访问地址 http://config-7080.com:7080/application-dev.yml

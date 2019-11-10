@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/SpringCloud.iml" filepath="$PROJECT_DIR$/.idea/SpringCloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud/microservicecloud.iml" filepath="$PROJECT_DIR$/microservicecloud/microservicecloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud/microservicecloud-api/microservicecloudapi.iml" filepath="$PROJECT_DIR$/microservicecloud/microservicecloud-api/microservicecloudapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud/microservicecloud-config-7080/microservicecloudconfig7080.iml" filepath="$PROJECT_DIR$/microservicecloud/microservicecloud-config-7080/microservicecloudconfig7080.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud/microservicecloud-consumer-dept-80/microservicecloudconsumerdept80.iml" filepath="$PROJECT_DIR$/microservicecloud/microservicecloud-consumer-dept-80/microservicecloudconsumerdept80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud/microservicecloud-consumer-dept-feign/microservicecloudconsumerdeptfeign.iml" filepath="$PROJECT_DIR$/microservicecloud/microservicecloud-consumer-dept-feign/microservicecloudconsumerdeptfeign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud/microservicecloud-eureka-7071/microservicecloudeureka7071.iml" filepath="$PROJECT_DIR$/microservicecloud/microservicecloud-eureka-7071/microservicecloudeureka7071.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud/microservicecloud-eureka-7072/microservicecloudeureka7072.iml" filepath="$PROJECT_DIR$/microservicecloud/microservicecloud-eureka-7072/microservicecloudeureka7072.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud/microservicecloud-eureka-7073/microservicecloudeureka7073.iml" filepath="$PROJECT_DIR$/microservicecloud/microservicecloud-eureka-7073/microservicecloudeureka7073.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud/microservicecloud-provider-dept-8081/microservicecloudproviderdept8081.iml" filepath="$PROJECT_DIR$/microservicecloud/microservicecloud-provider-dept-8081/microservicecloudproviderdept8081.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud/microservicecloud-provider-dept-8082/microservicecloudproviderdept8082.iml" filepath="$PROJECT_DIR$/microservicecloud/microservicecloud-provider-dept-8082/microservicecloudproviderdept8082.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud/microservicecloud-provider-dept-8083/microservicecloudproviderdept8083.iml" filepath="$PROJECT_DIR$/microservicecloud/microservicecloud-provider-dept-8083/microservicecloudproviderdept8083.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud/microservicecloud-provider-dept-hystrix-8081/microservicecloudproviderdepthystrix8081.iml" filepath="$PROJECT_DIR$/microservicecloud/microservicecloud-provider-dept-hystrix-8081/microservicecloudproviderdepthystrix8081.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud/microservicecloud-zuul-gateway-9527/microservicecloudzuulgateway9527.iml" filepath="$PROJECT_DIR$/microservicecloud/microservicecloud-zuul-gateway-9527/microservicecloudzuulgateway9527.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud/microservicecloud-consumer-hystrix-dashboard/microserviceconsumerhystrixdashboard.iml" filepath="$PROJECT_DIR$/microservicecloud/microservicecloud-consumer-hystrix-dashboard/microserviceconsumerhystrixdashboard.iml" />
+    </modules>
+  </component>
+</project>

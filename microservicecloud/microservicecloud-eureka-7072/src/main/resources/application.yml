@@ -1,0 +1,14 @@
+server:
+  port: 7072
+
+eureka:
+  instance:       #单机集群，在C:\Windows\System32\drivers\etc\host文件上添加域名映射
+    hostname: eureka7072.com   #eureka服务端的实例名称  重要 唯一
+  client:
+    fetchRegistry: false          #false表示不向注册中心注册自己
+    registerWithEureka: false     #false表示自己端就是注册中心
+    service-url:
+      #单机                                    端口名称 ：端口号
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  #设置与Eureka server 交互的地址查询服务和注册服务
+      #集群
+      defaultZone: http://eureka7071.com:7071/eureka/,http://eureka7073.com:7073/eureka/

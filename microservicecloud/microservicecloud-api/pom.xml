@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!--继承-->
+    <parent>
+        <artifactId>microservicecloud</artifactId>
+        <groupId>com.pupupu.springcloud</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--公共子模块-->
+    <artifactId>microservicecloud-api</artifactId>
+
+    <!--Lombok：要安装插件，在项目中使用Lombok可以减少很多重复代码的书写。比如说getter/setter/toString等方法的编写
+    @Data 该注解注解用在类上，可以为类创建setter、getter、toString()、hashCode()等方法
+    @Getter 作用在每一个字段上，能够为该字段创建getter方法
+    @Setter 作用在每一个字段上，能够为该字段创建setter方法
+    @NoArgsConstructor, @AllArgsConstructor 作用在类上，提供的分别是无参数的构造函数和全参数的构造函数
+    @toString 作用在类上，单独的构造toString()方法
+    NonNull 字段的非空检查
+    Accessor的中文含义是存取器，@Accessors用于配置getter和setter方法的生成结果
+        其属性值
+        fluent
+        fluent的中文含义是流畅的，设置为true，则getter和setter方法的方法名都是基础属性名，且setter方法返回当前对象
+        chain
+        chain的中文含义是链式的，设置为true，则setter方法返回当前对象
+        prefix
+        prefix的中文含义是前缀，用于生成getter和setter方法的字段名会忽视指定前缀（遵守驼峰命名）：perfix="p"，忽略前缀p
+    -->
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!--feign相关依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

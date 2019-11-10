@@ -1,0 +1,30 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: microservicecloud-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7071.com:7071/eureka,http://eureka7072.com:7072/eureka,http://eureka7073.com:7073/eureka
+  instance:
+    instance-id: zuul-gateway-9527.com
+    prefer-ip-address: true
+
+zuul:
+  prefix: /pupupu                                   # 设置统一前缀
+  routes:
+    deptproxy.serviceId: microservicecloud-dept
+    deptproxy.path: /deptproxy/**
+  #  ignored-services: microservicecloud-dept       # 禁止真实服务名访问，如果要禁止所有的使用过 <"*">
+  ignored-services: "*"
+
+
+info:
+  app.name: micoservicecloud
+  company.name: www.pupupu.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
+

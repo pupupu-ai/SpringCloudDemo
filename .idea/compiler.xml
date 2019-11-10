@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="microserviceconsumerhystrixdashboard" />
+        <module name="microservicecloudapi" />
+        <module name="microservicecloudproviderdepthystrix8081" />
+        <module name="microservicecloudeureka7072" />
+        <module name="microservicecloudzuulgateway9527" />
+        <module name="microservicecloudproviderdept8083" />
+        <module name="microservicecloudproviderdept8082" />
+        <module name="microservicecloudproviderdept8081" />
+        <module name="microservicecloudeureka7073" />
+        <module name="microservicecloudeureka7071" />
+        <module name="microservicecloudconsumerdeptfeign" />
+        <module name="microservicecloudconfig7080" />
+        <module name="microservicecloudconsumerdept80" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="microservicecloud" target="1.8" />
+      <module name="microservicecloudapi" target="1.8" />
+      <module name="microservicecloudconfig7080" target="1.8" />
+      <module name="microservicecloudconsumerdept80" target="1.8" />
+      <module name="microservicecloudconsumerdeptfeign" target="1.8" />
+      <module name="microservicecloudeureka7071" target="1.8" />
+      <module name="microservicecloudeureka7072" target="1.8" />
+      <module name="microservicecloudeureka7073" target="1.8" />
+      <module name="microservicecloudproviderdept8081" target="1.8" />
+      <module name="microservicecloudproviderdept8082" target="1.8" />
+      <module name="microservicecloudproviderdept8083" target="1.8" />
+      <module name="microservicecloudproviderdepthystrix8081" target="1.8" />
+      <module name="microservicecloudzuulgateway9527" target="1.8" />
+      <module name="microserviceconsumerhystrixdashboard" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.pupupu.springcloud</groupId>
+    <artifactId>microservicecloud</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!--聚合-->
+    <modules>
+        <module>microservicecloud-api</module>
+        <module>microservicecloud-provider-dept-8081</module>
+        <module>microservicecloud-consumer-dept-80</module>
+        <module>microservicecloud-eureka-7071</module>
+        <module>microservicecloud-eureka-7072</module>
+        <module>microservicecloud-eureka-7073</module>
+        <module>microservicecloud-provider-dept-8082</module>
+        <module>microservicecloud-provider-dept-8083</module>
+        <module>microservicecloud-consumer-dept-feign</module>
+        <module>microservicecloud-provider-dept-hystrix-8081</module>
+        <module>microservicecloud-consumer-hystrix-dashboard</module>
+        <module>microservicecloud-zuul-gateway-9527</module>
+        <module>microservicecloud-config-7080</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <junit.version>4.12</junit.version>
+        <lombok.version>1.16.18</lombok.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Dalston.SR1</version><!--教程使用Dalston.SR1，是很老的版本了-->
+                <type>pom</type>
+                <scope>import</scope>  <!--外部引入，而非继承-->
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>1.5.9.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.15</version><!--教程使用5.0.4-->
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.1.6</version><!--教程使用1.0.31-->
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>1.3.0</version>
+            </dependency>
+
+            <!--日志依赖 slf4j接口绑定logback实现 只要添加这一个，其他的依赖jar都会被下载下来。-->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>1.2.3</version>
+            </dependency>
+
+            <!-- log4j 桥接到 slf4j -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>log4j-over-slf4j</artifactId>
+                <version>1.7.26</version>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+    <build><!--为eureka微服务的info信息或其他做准备-->
+        <finalName>microservicecloud</finalName>
+        <resources>
+            <!-- 允许访问所有工程的src/main/resources下的文件-->
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <!--这个插件负责解析和解读-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <!--配置为能够读取src/main/resources下的文件中的以$开始$结束的数据-->
+                    <delimiters>
+                        <delimit>$</delimit>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

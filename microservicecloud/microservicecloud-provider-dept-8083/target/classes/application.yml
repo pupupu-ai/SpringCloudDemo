@@ -1,0 +1,43 @@
+server:
+  port: 8083
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml      # mybatis配置文件所在路径
+  type-aliases-package: com.pupupu.springcloud.entities  # 所有Entity别名类所在包
+  mapper-locations: classpath:mybatis/mapper/**/*.xml     # mapper映射文件
+
+spring:
+  application:
+    name: microservicecloud-dept      # 重要 为eureka定位     # 微服务名字 在微服务中很重要
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource          # 当前数据库操作类型
+    driver-class-name: com.mysql.cj.jdbc.Driver              # 驱动包
+    url: jdbc:mysql://localhost:3306/cloudDB03?characterEncoding=utf8&serverTimezone=GMT%2b8&useSSL=false&allowMultiQueries=true
+    username: root
+    password: root
+    dbcp2:
+      min-idle: 5                                          # 最小连接数
+      initial-size: 5                                      # 初始化连接数
+      max-total: 5                                         # 最大连接数
+
+# 修改部分 将此服务修改为eureka客户端
+eureka:
+  client: # 客户端注册进eureka服务列表内
+    service-url:
+      #单机
+      #defaultZone: http://localhost:7071/eureka             # 服务端地址
+      #集群
+      defaultZone: http://eureka7071.com:7071/eureka,http://eureka7072.com:7072/eureka,http://eureka7073.com:7073/eureka
+  instance:
+    instance-id: microservicecloud-dept-8083                # 自定义服务名称
+    prefer-ip-address: true                                 # 访问路径可以显示IP地址
+
+info:
+  app.name: micoservicecloud
+  company.name: www.pupupu.com
+  build.artifactId: microservicecloud-provider-dept-8083
+  build.version: 1.0-SNAPSHOT
+
+
+
+
