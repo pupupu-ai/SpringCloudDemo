@@ -15,11 +15,12 @@ eureka:
 
 zuul:
   prefix: /pupupu                                   # 设置统一前缀
+  ignored-services: "*"
   routes:
     deptproxy.serviceId: microservicecloud-dept
     deptproxy.path: /deptproxy/**
   #  ignored-services: microservicecloud-dept       # 禁止真实服务名访问，如果要禁止所有的使用过 <"*">
-  ignored-services: "*"
+
 
 
 info:

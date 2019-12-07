@@ -18,4 +18,4 @@ public class Zuul_9527_StartSpringCloud_App {
     }
 }
 // 访问方式：http://自定义的网关名称：网关端口/自定义前缀/微服务名称的别名/访问方法的地址
-// http://microservicecloud-zuul-gateway:9527/pupupu/deptproxy/dept/get/1
+//  http://zuul-gateway.com:9527/pupupu/deptproxy/dept/get/1
